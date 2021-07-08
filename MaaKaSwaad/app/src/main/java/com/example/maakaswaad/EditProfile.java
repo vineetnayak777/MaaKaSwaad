@@ -94,6 +94,8 @@ public class EditProfile extends AppCompatActivity {
                         edited.put("fName",profileFullName.getText().toString());
                         edited.put("phone",profilePhone.getText().toString());
                         docRef.update(edited).addOnSuccessListener(new OnSuccessListener<Void>() {
+
+
                             @Override
                             public void onSuccess(Void aVoid) {
                                 Toast.makeText(EditProfile.this, "Profile Updated", Toast.LENGTH_SHORT).show();
