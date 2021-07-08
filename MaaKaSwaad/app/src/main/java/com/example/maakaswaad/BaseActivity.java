@@ -42,7 +42,7 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
 
         switch (id){
             case R.id.nav_dashboard:
-                Intent intent1 = new Intent(BaseActivity.this, DashboardActivity.class);
+                Intent intent1 = new Intent(BaseActivity.this, NestedDashboard.class);
                 startActivity(intent1);
                 break;
             case R.id.home_food:
