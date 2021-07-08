@@ -54,7 +54,7 @@ public class RegisterActivity extends AppCompatActivity {
         progressBar = findViewById(R.id.progressBar);
 
         if(fAuth.getCurrentUser() != null){
-            startActivity(new Intent(getApplicationContext(),DashboardActivity.class));
+            startActivity(new Intent(getApplicationContext(),NestedDashboard.class));
             finish();
         }
 
@@ -124,7 +124,7 @@ public class RegisterActivity extends AppCompatActivity {
                                     Log.d(TAG, "onFailure: " + e.toString());
                                 }
                             });
-                            startActivity(new Intent(getApplicationContext(),DashboardActivity.class));
+                            startActivity(new Intent(getApplicationContext(),NestedDashboard.class));
 
                         }else {
                             Toast.makeText(RegisterActivity.this, "Error ! " + Objects.requireNonNull(task.getException()).getMessage(), Toast.LENGTH_SHORT).show();

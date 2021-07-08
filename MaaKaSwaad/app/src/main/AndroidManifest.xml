@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MaaKaSwaad">
-        <activity android:name=".DashboardActivity"></activity>
+        <activity android:name=".NestedDashboard"></activity>
+        <activity android:name=".DashboardActivity" />
         <activity android:name=".DetailsActivity" />
         <activity android:name=".BaseActivity" />
         <activity android:name=".EditProfile" />
