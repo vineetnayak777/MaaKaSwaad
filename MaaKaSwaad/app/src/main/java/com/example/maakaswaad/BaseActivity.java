@@ -14,11 +14,14 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
 
+
 public class BaseActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
     DrawerLayout drawerLayout;
     Toolbar toolbar;
     NavigationView navigationView;
     ActionBarDrawerToggle actionBarDrawerToggle;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,3 +70,4 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
         return true;
     }
 }
+

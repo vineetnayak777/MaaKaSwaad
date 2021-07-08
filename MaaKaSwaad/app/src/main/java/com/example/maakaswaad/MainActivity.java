@@ -2,6 +2,7 @@ package com.example.maakaswaad;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -30,7 +31,7 @@ import java.util.Objects;
 
 public class MainActivity extends BaseActivity {
     private static final int GALLERY_INTENT_CODE = 1023 ;
-    TextView fullName,email,phone,verifyMsg;
+    TextView fullName,email,phone,verifyMsg, usernamefornav;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     String userId;
@@ -39,6 +40,9 @@ public class MainActivity extends BaseActivity {
     FirebaseUser user;
     ImageView profileImage;
     StorageReference storageReference;
+    SharedPreferences mPreferences;
+    SharedPreferences.Editor mEditor;
+    String Name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,10 +54,14 @@ public class MainActivity extends BaseActivity {
         fullName = findViewById(R.id.profileName);
         email    = findViewById(R.id.profileEmail);
         resetPassLocal = findViewById(R.id.resetPasswordLocal);
+        usernamefornav = (TextView)findViewById(R.id.usernamefornav);
+
 
         profileImage = findViewById(R.id.profileImage);
         changeProfileImage = findViewById(R.id.changeProfile);
 
+        mPreferences = getSharedPreferences("UserSharedPref", MODE_PRIVATE);
+        mEditor = mPreferences.edit();
 
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
@@ -98,15 +106,12 @@ public class MainActivity extends BaseActivity {
         }
 
 
-
-
         DocumentReference documentReference = fStore.collection("users").document(userId);
         documentReference.addSnapshotListener(this, (documentSnapshot, e) -> {
             if(documentSnapshot.exists()){
                 phone.setText(documentSnapshot.getString("phone"));
                 fullName.setText(documentSnapshot.getString("fName"));
                 email.setText(documentSnapshot.getString("email"));
-
             }else {
                 Log.d("tag", "onEvent: Document do not exists");
             }
