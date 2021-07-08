@@ -13,6 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MaaKaSwaad">
         <activity android:name=".DashboardActivity"></activity>
+        <activity android:name=".DetailsActivity" />
         <activity android:name=".BaseActivity" />
         <activity android:name=".EditProfile" />
         <activity android:name=".RegisterActivity" />

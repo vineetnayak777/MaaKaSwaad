@@ -15,11 +15,13 @@
         android:paddingTop="40dp"
         app:srcCompat="@drawable/logo_one" />
     <TextView
+        android:id="@+id/usernamefornav"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hii! Welcome..."
+        android:text="Hii There! Welcome..."
         android:textSize="20dp"
         android:textStyle="italic"
+        android:gravity="center"
         android:background="@color/teal_200"/>
 
 
