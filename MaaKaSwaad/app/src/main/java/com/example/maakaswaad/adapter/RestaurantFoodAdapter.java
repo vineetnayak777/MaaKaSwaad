@@ -1,6 +1,7 @@
 package com.example.maakaswaad.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.maakaswaad.DetailsActivity;
 import com.example.maakaswaad.R;
 import com.example.maakaswaad.model.RestaurantFood;
 
@@ -41,6 +43,19 @@ public class RestaurantFoodAdapter extends RecyclerView.Adapter<RestaurantFoodAd
         holder.price.setText(restaurantFoodList.get(position).getPrice());
         holder.rating.setText(restaurantFoodList.get(position).getRating());
         holder.restaurantName.setText(restaurantFoodList.get(position).getRestaurantname());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Integer url;
+                Intent i = new Intent(context, DetailsActivity.class);
+                url = restaurantFoodList.get(position).getImageUrl();
+                i.putExtra("name", restaurantFoodList.get(position).getName());
+                i.putExtra("price", restaurantFoodList.get(position).getPrice());
+                i.putExtra("image", url);
+                i.putExtra("rating",restaurantFoodList.get(position).getRating());
+                context.startActivity(i);
+            }
+        });
 
     }
 

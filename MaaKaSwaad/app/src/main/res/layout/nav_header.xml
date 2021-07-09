@@ -8,7 +8,7 @@
     >
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/profile_pic_nav"
         android:layout_width="wrap_content"
         android:layout_height="133dp"
         android:background="@color/teal_200"

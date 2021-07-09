@@ -4,10 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetailsActivity">
+    tools:context=".DetailsActivity"
+    android:background="@color/teal_700">
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/profile_pic_nav"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -37,17 +38,17 @@
         app:srcCompat="@drawable/ic_rectangle_344" />
 
     <ImageView
-        android:id="@+id/imageView8"
+        android:id="@+id/food_image_det"
         android:layout_width="285dp"
         android:layout_height="305dp"
         android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        app:layout_constraintTop_toBottomOf="@+id/profile_pic_nav"
         app:srcCompat="@drawable/popularfood1" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/rating_det"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -58,7 +59,7 @@
         app:layout_constraintEnd_toStartOf="@+id/textView5"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+        app:layout_constraintTop_toBottomOf="@+id/food_image_det" />
 
     <TextView
         android:id="@+id/textView5"
@@ -68,11 +69,11 @@
         android:text="105"
         android:textColor="#272670"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView3"
+        app:layout_constraintBottom_toBottomOf="@+id/rating_det"
         app:layout_constraintEnd_toStartOf="@+id/textView6"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/textView3"
-        app:layout_constraintTop_toTopOf="@+id/textView3" />
+        app:layout_constraintStart_toEndOf="@+id/rating_det"
+        app:layout_constraintTop_toTopOf="@+id/rating_det" />
 
     <TextView
         android:id="@+id/textView6"
@@ -96,9 +97,9 @@
         android:fontFamily="@font/regular"
         android:text="Rating"
         android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView3"
-        app:layout_constraintStart_toStartOf="@+id/textView3"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintEnd_toEndOf="@+id/rating_det"
+        app:layout_constraintStart_toStartOf="@+id/rating_det"
+        app:layout_constraintTop_toBottomOf="@+id/rating_det" />
 
     <TextView
         android:id="@+id/textView8"
@@ -125,7 +126,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/type_food_det"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -138,7 +139,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/food_name_det"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
@@ -146,8 +147,8 @@
         android:text="Paneer Kadai"
         android:textColor="#091020"
         android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="@+id/textView10"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+        app:layout_constraintStart_toStartOf="@+id/type_food_det"
+        app:layout_constraintTop_toBottomOf="@+id/type_food_det" />
 
     <ImageView
         android:id="@+id/imageView9"
@@ -155,11 +156,11 @@
         android:layout_height="52dp"
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView10"
+        app:layout_constraintTop_toTopOf="@+id/type_food_det"
         app:srcCompat="@drawable/tagfree" />
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/content_food_det"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -169,7 +170,7 @@
         android:text="Kadai Paneer is a vibrant, tangy, spiced paneer dish that can brighten up your day any time."
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+        app:layout_constraintTop_toBottomOf="@+id/food_name_det" />
 
     <ImageView
         android:id="@+id/imageView10"
@@ -178,7 +179,7 @@
         android:layout_marginStart="21dp"
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        app:layout_constraintTop_toBottomOf="@+id/content_food_det"
         app:srcCompat="@drawable/ic_group_400" />
 
     <TextView
@@ -205,7 +206,7 @@
         app:srcCompat="@drawable/ic_group_401" />
 
     <TextView
-        android:id="@+id/textView14"
+        android:id="@+id/price_det"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"

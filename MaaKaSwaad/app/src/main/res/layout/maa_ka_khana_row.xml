@@ -23,6 +23,7 @@
             android:adjustViewBounds="true"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            android:scaleType="fitXY"
             app:srcCompat="@drawable/maakakhana1" />
 
         <TextView
@@ -80,6 +81,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:scaleType="fitXY"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/name"
             app:layout_constraintTop_toBottomOf="@+id/name"
@@ -105,7 +107,8 @@
             app:layout_constraintStart_toEndOf="@+id/rating"
             app:layout_constraintTop_toTopOf="@+id/rating"
             app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@drawable/profile" />
+            app:srcCompat="@drawable/profile"
+            />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

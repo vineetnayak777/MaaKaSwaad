@@ -42,10 +42,16 @@ public class PopularFoodAdapter extends RecyclerView.Adapter<PopularFoodAdapter.
         holder.name.setText(popularFoodlist.get(position).getName());
         holder.price.setText(popularFoodlist.get(position).getPrice());
 
+
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Integer url;
                 Intent i = new Intent(context, DetailsActivity.class);
+                url = popularFoodlist.get(position).getImageUrl();
+                i.putExtra("name", popularFoodlist.get(position).getName());
+                i.putExtra("price", popularFoodlist.get(position).getPrice());
+                i.putExtra("image", url);
                 context.startActivity(i);
             }
         });

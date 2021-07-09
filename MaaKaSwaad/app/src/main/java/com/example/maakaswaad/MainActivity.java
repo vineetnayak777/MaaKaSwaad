@@ -169,12 +169,15 @@ public class MainActivity extends BaseActivity {
                 i.putExtra("email",email.getText().toString());
                 i.putExtra("phone",phone.getText().toString());
                 startActivity(i);
-//
 
             }
         });
 
+    }
 
+    public void openLink(View view){
+        Intent openlinkIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://forms.gle/taQ9fU3opKphTPFs7"));
+        startActivity(openlinkIntent);
     }
 
 
