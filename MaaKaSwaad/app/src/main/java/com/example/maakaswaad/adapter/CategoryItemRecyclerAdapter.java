@@ -1,6 +1,7 @@
 package com.example.maakaswaad.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,8 +11,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.maakaswaad.DetailsActivity;
 import com.example.maakaswaad.R;
 import com.example.maakaswaad.model.CategoryItem;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -19,6 +22,7 @@ public class CategoryItemRecyclerAdapter extends RecyclerView.Adapter<CategoryIt
 
     private Context context;
     private List<CategoryItem> categoryItemList;
+    RecyclerView detailsRecyler;
 
     public CategoryItemRecyclerAdapter(Context context, List<CategoryItem> categoryItemList) {
         this.context = context;
@@ -36,7 +40,19 @@ public class CategoryItemRecyclerAdapter extends RecyclerView.Adapter<CategoryIt
 
         holder.name.setText(categoryItemList.get(position).getName());
         holder.price.setText(categoryItemList.get(position).getPrice());
-        holder.itemImage.setImageResource(categoryItemList.get(position).getImageUrl());
+        Picasso.get().load(categoryItemList.get(position).getImageUrl()).into(holder.itemImage);
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Integer url;
+                Intent i = new Intent(context, DetailsActivity.class);
+                url = categoryItemList.get(position).getImageUrl();
+                i.putExtra("name", categoryItemList.get(position).getName());
+                i.putExtra("price", categoryItemList.get(position).getPrice());
+                i.putExtra("image", url);
+                context.startActivity(i);
+            }
+        });
     }
 
     @Override
@@ -57,5 +73,6 @@ public class CategoryItemRecyclerAdapter extends RecyclerView.Adapter<CategoryIt
 
         }
     }
+
 
 }

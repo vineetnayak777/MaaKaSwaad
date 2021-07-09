@@ -1,5 +1,6 @@
 package com.example.maakaswaad;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -95,6 +96,10 @@ public class NestedDashboard extends BaseActivity {
         mainRecyclerAdapter = new MainRecyclerAdapter(this, allCategoryList);
         mainCategoryRecycler.setAdapter(mainRecyclerAdapter);
 
+    }
+    public void OpenProfile(View view){
+        Intent i1 = new Intent(this, MainActivity.class);
+        startActivity(i1);
     }
 
 }

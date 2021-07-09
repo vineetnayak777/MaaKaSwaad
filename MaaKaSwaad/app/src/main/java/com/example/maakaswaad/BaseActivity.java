@@ -46,10 +46,12 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(intent1);
                 break;
             case R.id.home_food:
+                Intent intent2 = new Intent(BaseActivity.this, DashboardActivity.class);
+                startActivity(intent2);
                 break;
             case R.id.popular_foods:
-                break;
-            case R.id.restaurant_foods:
+                Intent intent3 = new Intent(BaseActivity.this, RestaurantActivity.class);
+                startActivity(intent3);
                 break;
             case R.id.mission:
                 break;
@@ -69,5 +71,6 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }
+
 }
 
