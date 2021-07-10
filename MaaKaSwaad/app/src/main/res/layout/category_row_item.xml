@@ -23,7 +23,7 @@
             android:scaleType="fitXY"/>
 
         <TextView
-            android:id="@+id/name"
+            android:id="@+id/name_rec"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -54,7 +54,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/name"
-            app:layout_constraintTop_toTopOf="@+id/name" />
+            app:layout_constraintStart_toEndOf="@+id/name_rec"
+            app:layout_constraintTop_toTopOf="@+id/name_rec" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

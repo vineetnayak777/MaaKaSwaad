@@ -12,6 +12,9 @@
         <item
             android:title="Popular Foods"
             android:id="@+id/popular_foods"/>
+        <item
+            android:title="Recipes"
+            android:id="@+id/recipes"/>
     </group>
     <item
         android:title="About Us">

@@ -1,0 +1,21 @@
+{
+  "foods": [
+    {
+      "id": 1,
+      "food_name": "Paneer Tikka",
+      "ratings": "4.5",
+      "price": "Rs. 140",
+      "food_type": "Veggie",
+      "content": "Kadai Paneer is a vibrant, tangy, spiced paneer dish that can brighten up your day any time."
+    },
+    {
+      "id": 2,
+      "food_name": "Paneer Lolipop",
+      "ratings": "4.8",
+      "price": "Rs. 180",
+      "food_type": "Fried Veggie",
+      "content": " This is one of the famous Indo Chinese Recipes and can be easily made at home\u200B. Paneer Lollipop is basically spicy Paneer (Cottage Cheese)."
+
+    }
+  ]
+}
