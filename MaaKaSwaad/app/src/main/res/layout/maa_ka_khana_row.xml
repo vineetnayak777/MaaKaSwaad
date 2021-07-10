@@ -17,7 +17,7 @@
 
 
         <ImageView
-            android:id="@+id/food_image"
+            android:id="@+id/food_image_rec"
             android:layout_width="102dp"
             android:layout_height="84dp"
             android:adjustViewBounds="true"
@@ -27,7 +27,7 @@
             app:srcCompat="@drawable/maakakhana1" />
 
         <TextView
-            android:id="@+id/name"
+            android:id="@+id/name_rec"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -61,7 +61,7 @@
             android:text="Moms Special"
             android:textColor="#F06941"
             android:textSize="12sp"
-            app:layout_constraintStart_toEndOf="@+id/food_image"
+            app:layout_constraintStart_toEndOf="@+id/food_image_rec"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
@@ -83,8 +83,8 @@
             android:layout_marginTop="8dp"
             android:scaleType="fitXY"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/name"
-            app:layout_constraintTop_toBottomOf="@+id/name"
+            app:layout_constraintStart_toStartOf="@+id/name_rec"
+            app:layout_constraintTop_toBottomOf="@+id/name_rec"
             app:srcCompat="@drawable/ic_star_black_24dp" />
 
         <TextView
