@@ -1,6 +1,7 @@
 package com.example.maakaswaad.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.maakaswaad.R;
+import com.example.maakaswaad.RecipeDetails;
 import com.example.maakaswaad.model.RecipeItem;
 
 import java.util.List;
@@ -35,6 +37,14 @@ public class RecipeItemRecyclerAdapter extends RecyclerView.Adapter<RecipeItemRe
     public void onBindViewHolder(@NonNull RecipeItemViewHolder holder, int position){
         holder.itemImage.setImageResource(recipeItemList.get(position).getImageUrl());
         holder.name.setText(recipeItemList.get(position).getName());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(context, RecipeDetails.class);
+                i.putExtra("name", recipeItemList.get(position).getName());
+                context.startActivity(i);
+            }
+        });
     }
 
     @Override
