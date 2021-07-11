@@ -54,6 +54,8 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(intent3);
                 break;
             case R.id.recipes:
+                Intent intent4 = new Intent(BaseActivity.this, RecipeActivity.class);
+                startActivity(intent4);
                 break;
             case R.id.mission:
                 break;
