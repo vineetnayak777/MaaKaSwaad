@@ -12,8 +12,11 @@ import com.example.maakaswaad.adapter.MainRecyclerAdapter;
 import com.example.maakaswaad.adapter.MothersFoodAdapter;
 import com.example.maakaswaad.adapter.PopularFoodAdapter;
 import com.example.maakaswaad.adapter.RestaurantFoodAdapter;
+import com.example.maakaswaad.adapter.SliderAdapter;
 import com.example.maakaswaad.model.AllCategory;
 import com.example.maakaswaad.model.CategoryItem;
+import com.example.maakaswaad.model.SliderData;
+import com.smarteist.autoimageslider.SliderView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,6 +28,7 @@ public class NestedDashboard extends BaseActivity {
     PopularFoodAdapter popularFoodAdapter;
     RestaurantFoodAdapter restaurantFoodAdapter;
     MothersFoodAdapter mothersFoodAdapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,6 +89,36 @@ public class NestedDashboard extends BaseActivity {
         allCategoryList.add(new AllCategory("Sweets & Deserts", categoryItemList5));
 
         setMainCategoryRecycler(allCategoryList);
+
+        ArrayList<SliderData> sliderDataArrayList = new ArrayList<>();
+
+        // initializing the slider view.
+        SliderView sliderView = findViewById(R.id.slider);
+
+        // adding the urls inside array list
+        sliderDataArrayList.add(new SliderData(R.drawable.logo_one));
+        sliderDataArrayList.add(new SliderData(R.drawable.small_icon));
+        sliderDataArrayList.add(new SliderData(R.drawable.small_icon_2));
+
+        // passing this array list inside our adapter class.
+        SliderAdapter adapter = new SliderAdapter(this, sliderDataArrayList);
+
+        // below method is used to set auto cycle direction in left to
+        // right direction you can change according to requirement.
+        sliderView.setAutoCycleDirection(SliderView.LAYOUT_DIRECTION_LTR);
+
+        // below method is used to
+        // setadapter to sliderview.
+        sliderView.setSliderAdapter(adapter);
+
+        sliderView.setScrollTimeInSec(3);
+
+        // to set it scrollable automatically
+        // we use below method.
+        sliderView.setAutoCycle(true);
+
+        // to start autocycle below method is used.
+        sliderView.startAutoCycle();
 
     }
 
