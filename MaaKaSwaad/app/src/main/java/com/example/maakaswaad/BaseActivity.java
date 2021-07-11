@@ -58,8 +58,12 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(intent4);
                 break;
             case R.id.mission:
+                Intent intent6 = new Intent(BaseActivity.this, MissionActivity.class);
+                startActivity(intent6);
                 break;
             case R.id.developers:
+                Intent intent5 = new Intent(BaseActivity.this, DevelopersActivity.class);
+                startActivity(intent5);
                 break;
             case R.id.mail:
                 Toast.makeText(getApplicationContext(),"Mail: xxx@gmail.com",Toast.LENGTH_LONG).show();

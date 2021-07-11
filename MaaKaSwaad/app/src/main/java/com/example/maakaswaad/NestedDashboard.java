@@ -96,6 +96,7 @@ public class NestedDashboard extends BaseActivity {
         SliderView sliderView = findViewById(R.id.slider);
 
         // adding the urls inside array list
+        sliderDataArrayList.add(new SliderData(R.drawable.logo));
         sliderDataArrayList.add(new SliderData(R.drawable.logo_one));
         sliderDataArrayList.add(new SliderData(R.drawable.small_icon));
         sliderDataArrayList.add(new SliderData(R.drawable.small_icon_2));
