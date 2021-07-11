@@ -14,6 +14,11 @@ public class CategoryItem {
         this.name = name;
         this.price = price;
     }
+    public CategoryItem(Integer itemId,String name, Integer imageUrl) {
+        this.itemId = itemId;
+        this.imageUrl = imageUrl;
+        this.name = name;
+    }
 
     public Integer getItemId() {
         return itemId;
