@@ -32,7 +32,7 @@ public class RecipeActivity extends BaseActivity{
         recipeItemList.add(new RecipeItem(1, R.drawable.maakakhana1, "Paneer Tikka"));
 
         List<RecipeItem> recipeItemList1 = new ArrayList<>();
-        recipeItemList1.add(new RecipeItem(1, R.drawable.maakakhana1, "Paneer Tikka"));
+        recipeItemList1.add(new RecipeItem(1, R.drawable.popularfood1, "Paneer Lolipop"));
         recipeItemList1.add(new RecipeItem(1, R.drawable.maakakhana1, "Paneer Tikka"));
         recipeItemList1.add(new RecipeItem(1, R.drawable.maakakhana1, "Paneer Tikka"));
         recipeItemList1.add(new RecipeItem(1, R.drawable.maakakhana1, "Paneer Tikka"));
@@ -40,7 +40,7 @@ public class RecipeActivity extends BaseActivity{
 
         List<AllRecipeCategory> allRecipeCategoryList = new ArrayList<>();
         allRecipeCategoryList.add(new AllRecipeCategory("South Indian Dishes Recipes", recipeItemList));
-        allRecipeCategoryList.add(new AllRecipeCategory("North Indian Dishes Recipes", recipeItemList));
+        allRecipeCategoryList.add(new AllRecipeCategory("North Indian Dishes Recipes", recipeItemList1));
 
         setMainRecipeCategoryRecycler(allRecipeCategoryList);
     }

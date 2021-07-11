@@ -50,7 +50,7 @@ public class NestedDashboard extends BaseActivity {
 
         // added in 3rd category
         List<CategoryItem> categoryItemList3 = new ArrayList<>();
-        categoryItemList3.add(new CategoryItem(1,"Paneer Tikka", "Rs. 140", R.drawable.maakakhana1));
+        categoryItemList3.add(new CategoryItem(1,"Paneer Tikka", "Rs. 140", R.drawable.popularfood2));
         categoryItemList3.add(new CategoryItem(1,"Paneer Tikka", "Rs. 140", R.drawable.maakakhana1));
         categoryItemList3.add(new CategoryItem(1,"Paneer Tikka", "Rs. 140", R.drawable.maakakhana1));
         categoryItemList3.add(new CategoryItem(1,"Paneer Tikka", "Rs. 140", R.drawable.maakakhana1));
